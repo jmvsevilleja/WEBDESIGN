@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --background: #fff45f;
+  --foreground: #171412;
+  --card: #fffdf2;
+  --card-foreground: #171412;
+  --primary: #ff4f4f;
+  --primary-foreground: #fffdf2;
+  --secondary: #79e7d1;
+  --secondary-foreground: #171412;
+  --muted: #fff08a;
+  --muted-foreground: #5b4c2f;
+  --accent: #3f8cff;
+  --accent-foreground: #fffdf2;
+  --destructive: #c9182b;
+  --border: #171412;
+  --input: #171412;
+  --ring: #3f8cff;
+  --photo-red: #ff4f4f;
+  --photo-yellow: #fff45f;
+  --photo-blue: #3f8cff;
+  --photo-mint: #79e7d1;
+
+  --radius: 0;
+}
+
+.dark {
+  --background: #171412;
+  --foreground: #fffdf2;
+  --card: #25201d;
+  --card-foreground: #fffdf2;
+  --primary: #ff6868;
+  --primary-foreground: #171412;
+  --secondary: #79e7d1;
+  --secondary-foreground: #171412;
+  --muted: #302a24;
+  --muted-foreground: #dacfac;
+  --accent: #5ba0ff;
+  --accent-foreground: #171412;
+  --destructive: #ff6868;
+  --border: #fffdf2;
+  --input: #fffdf2;
+  --ring: #79e7d1;
+  --photo-red: #ff6868;
+  --photo-yellow: #fff45f;
+  --photo-blue: #5ba0ff;
+  --photo-mint: #79e7d1;
+
+  --radius: 0;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@keyframes countdown-pop {
+  0% { transform: scale(0.3); opacity: 0; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
