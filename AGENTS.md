@@ -2,7 +2,7 @@
 
 ## Repo state
 
-This is a web design workspace. No framework, build tooling, or package manager has been chosen yet. When one is added, update this file with the relevant commands (dev server, build, lint, test).
+This is a web design workspace. Stack: **React 19 + TypeScript + Tailwind CSS v4 + shadcn/ui v4**. Commands: `npx shadcn@latest add <component>` for UI components, `npm run dev` (Vite) or `npm run dev` (Next.js) for dev server.
 
 ## Design guidelines
 
@@ -19,7 +19,7 @@ You are acting as the design lead for this website. Every page you build should 
   - Broadsheet layout with hairline rules, zero border-radius, dense newspaper columns
   - Big number + small label + supporting stats + gradient accent as the hero
   - Numbered markers (01 / 02 / 03) used as decoration rather than an actual sequence
-  - Bootstrap/Tailwind-default spacing, shadows, and card layouts left unstyled
+  - Tailwind's default gray/neutral palette and spacing left uncustomized — always map shadcn/ui CSS variables to the project's own palette
 - Before finalizing any design, explicitly check it against this list. If it resembles any of the above, revise it and note what you changed and why.
 
 ### Always use beautiful, intentional typography
